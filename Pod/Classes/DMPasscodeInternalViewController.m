@@ -37,7 +37,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = _config.backgroundColor;
     self.navigationController.navigationBar.barTintColor = _config.navigationBarBackgroundColor;
-    UIBarButtonItem* closeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(close:)];
+    //UIBarButtonItem* closeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(close:)];
+    UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_cross"] style:UIBarButtonItemStylePlain target:self action:@selector(close:)];
     closeItem.tintColor = _config.navigationBarForegroundColor;
     self.navigationItem.leftBarButtonItem = closeItem;
     self.navigationController.navigationBar.barStyle = (UIBarStyle)_config.statusBarStyle;
